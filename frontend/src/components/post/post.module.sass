@@ -1,0 +1,87 @@
+.post__block
+  background-color: #fff
+  border: 3px solid transparent
+  border-radius: 6px
+  margin-bottom: 15px
+  width: 755px
+  z-index: -1
+  &:hover
+    border: 3px solid #4361ee
+    .menu__post
+      opacity: 1
+      z-index: 10000
+
+.post__inner
+  position: relative
+  > .menu__post
+    position: absolute
+    display: flex
+    background-color: #f8f8f8
+    left: 88%
+    padding: 11px
+    top: 4%
+    z-index: 10000
+    border-radius: 4px
+    opacity: 0
+    transition: all 0.15s ease-in-out
+    > a
+      > .pencil
+        width: 15px
+        height: 15px
+        margin-right: 20px
+    > .close
+      width: 15px
+      cursor: pointer
+      height: 15px
+  > img
+    width: 100%
+    height: 316px
+    object-fit: cover
+  &-footer
+    padding: 15px 20px
+    &-indention
+      padding-left: 40px
+      max-width: 680px
+      > .title
+      > .text
+        word-break: break-all
+        font-weight: 400
+      > .tags
+        display: flex
+        flex-wrap: wrap
+        list-style: none
+        margin-top: 15px
+        > li
+          margin-right: 10px
+      > .postInfo
+        margin-top: 20px
+        display: flex
+        & > p:first-child
+          margin-right: 20px
+
+@media screen and (max-width: 1200px)
+  .post__block
+    width: 100%
+
+@media screen and ( max-width: 640px )
+  .menu__post
+    margin-left: -30px
+
+@media screen and ( max-width: 640px )
+  .menu__post
+    margin-left: -40px
+
+@media screen and ( max-width: 366px )
+  .menu__post
+    margin-left: -40px
+  .title
+    font-size: 1.5em
+  .text
+    font-size: 13px
+  .postInfo
+    display: flex
+    flex-wrap: wrap
+    > p
+      font-size: 10px
+    // display: flex
+    // flex-direction: column

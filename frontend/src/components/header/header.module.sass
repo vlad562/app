@@ -1,0 +1,197 @@
+@keyframes open
+  from
+    transform: translateY(200px)
+  to
+    transform: translateY(0px)
+
+@keyframes close
+  from
+    transform: translateY(0px)
+  to
+    transform: translateY(200px)
+
+.container
+  max-width: 1200px
+  margin: 0 auto
+  padding: 5px 15px
+
+.header
+  width: 100%
+  background-color: #fff
+  z-index: 1000
+  border-bottom: 1px solid #e0e0e0
+  margin-bottom: 30px
+  &__inner
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 5px
+    .btn__burger
+      display: none
+    > .auth__block
+      display: flex
+      margin: 0
+      >li
+        list-style-type: none
+        &:first-child
+          padding-right: 15px
+          & > a
+            color: #4361ee
+            font-size: 13px
+            background-color: #fff
+            border: 1px solid #4361ee
+            border-radius: 5px
+            padding: 10px 18px
+          > a
+            font-size: 13px
+            text-decoration: none
+            color: #fff
+            background-color: #4361ee
+            padding: 11px 18px
+            border-radius: 5px
+    &-logo
+      background-color: #000
+      color: #fff
+      padding: 8px 35px
+      border-radius: 10px
+      font-size: 15px
+      font-weight: 500
+      font-family: 'Roboto', sans-serif
+    &-authMenu
+      > ul
+        display: flex
+        margin: 0
+        // &:first-child > a
+        //   color: red
+        >li
+          list-style-type: none
+          &:first-child
+            padding-right: 15px
+            & > a
+              color: #4361ee
+              font-size: 13px
+              background-color: #fff
+              border: 1px solid #4361ee
+              border-radius: 5px
+              padding: 10px 18px
+          > a
+            font-size: 13px
+            text-decoration: none
+            color: #fff
+            background-color: #4361ee
+            padding: 11px 18px
+            border-radius: 5px
+
+@media screen and ( max-width:  440px)
+  html,
+  body
+    height: 100%
+  .container
+    height: 100%
+  .header__inner
+    &-logo
+      background-color: #000
+      color: #fff
+      padding: 5px 10px
+      border-radius: 10px
+      font-size: 10px
+      font-weight: 400
+    &-authMenu
+      display: none
+    .btn__burger
+      display: block
+      > .btn__mobile
+        border: none
+        position: relative
+        opacity: 0.3
+        span
+          position: absolute
+          top: 250%
+          right: -5%
+          width: 25px
+          background-color: black
+          height: 2px
+        &::after
+          content: ''
+          position: absolute
+          bottom: 250%
+          right: -5%
+          width: 25px
+          background-color: #000
+          height: 2px
+        &::before
+          content: ''
+          right: -5%
+          position: absolute
+          bottom: 0%
+          width: 25px
+          background-color: #000
+          height: 2px
+    .btn__burger
+      position: relative
+      > .active
+        border: none
+        display: block
+        opacity: 0.3
+        &::after
+          content: ''
+          position: absolute
+          bottom: 31%
+          right: -5%
+          width: 25px
+          background-color: #000
+          height: 2px
+          transform: rotate(44deg)
+          transition: transform 0.5s ease-in
+        &::before
+          content: ''
+          right: -5%
+          position: absolute
+          bottom: 0%
+          width: 25px
+          background-color: #000
+          height: 2px
+          transform: rotate(134deg)
+          transition: transform 0.5s ease-in
+
+  .auth__block
+    z-index: 1000
+    display: flex
+    width: 100%
+    height: 200px
+    background-color: #fff
+    position: relative
+    position: absolute
+    bottom: 0px
+    left: 0
+    animation: open 0.8s 1
+    animation-fill-mode: forwards
+    > div
+      margin: 0 auto
+      display: flex
+      flex-direction: row
+      align-items: center
+      justify-content: flex-start
+      > ul
+        padding: 0
+        box-sizing: border-box
+        display: flex
+        flex-direction: column
+        align-items: center
+        >li
+          padding: 0
+          list-style-type: none
+          &:first-child
+            margin-bottom: 20px
+          > a
+            text-decoration: none
+            font-size: 13px
+            background-color: #fff
+            background-color: #4361ee
+            border-radius: 5px
+            padding: 10px 18px
+            font-size: 13px
+            text-decoration: none
+            color: #fff
+            padding: 11px 18px
+            border-radius: 5px

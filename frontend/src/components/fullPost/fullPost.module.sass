@@ -1,0 +1,191 @@
+@keyframes show
+  from { opacity: 0 }             
+  to { opacity: 1 }
+
+.container
+  max-width: 1200px
+  margin: 0 auto
+  padding: 5px 15px
+
+  // > div
+  //   & > .new__post
+  //     color: #4361ee
+  //     padding: 12px 16px
+  //     font-size: 0.875rem
+  //     cursor: pointer
+  //   & > .populate__post
+  //     color: #4361ee
+  //     font-size: 0.875rem
+  //     line-height: 1.25
+  //     padding: 12px 16px
+  //     cursor: pointer
+  //   & > span
+  //     display: block
+  //     background-color: #4361ee
+  //     height: 2px
+  //     animation: show 1s 1
+  //     animation-fill-mode: forwards
+
+.main__mid-block
+  .post__block
+    background-color: #fff
+    border: 3px solid transparent
+    border-radius: 6px
+    margin-bottom: 15px
+    width: 100%
+    &:hover
+      border: 3px solid #4361ee
+      .menu__post
+        opacity: 1
+
+  .post__inner
+    position: relative
+    .menu__post
+      position: absolute
+      display: flex
+      background-color: #f8f8f8
+      left: 92%
+      padding: 11px
+      top: 4%
+      border-radius: 4px
+      opacity: 0
+      transition: all 0.15s ease-in-out
+      > a
+        > .pencil
+          width: 15px
+          height: 15px
+          margin-right: 20px
+      > .close
+        width: 15px
+        cursor: pointer
+        height: 15px
+    > img
+      width: 100%
+      height: 316px
+      object-fit: cover
+    &-footer
+      padding: 15px 20px
+      &-indention
+        padding-left: 40px
+        max-width: 680px
+        > .title
+        > .text
+          word-break: break-all
+          font-size: 18px
+          font-weight: 400
+        > .tags
+          display: flex
+          flex-wrap: wrap
+          list-style: none
+          margin-top: 5px
+          margin-bottom: 30px
+          > li
+            margin-right: 10px
+            display: inline-block
+            font-size: 14px
+            margin-right: 15px
+            opacity: 0.5
+            &:hover
+              opacity: 1
+        > .postInfo
+          margin-top: 20px
+          display: flex
+          & > p:first-child
+            margin-right: 20px
+  .create__comment
+    background-color: #fff
+    display: flex
+    padding: 0 30px 15px 15px
+    img
+      width: 40px
+      height: 40px
+      margin-right: 15px
+    &-after
+      width: 100%
+      > button
+        margin-top: 10px
+        display: inline-flex
+        align-items: center
+        justify-content: center
+        position: relative
+        box-sizing: border-box
+        -webkit-tap-highlight-color: transparent
+        background-color: transparent
+        outline: 0
+        border: 0
+        border-radius: 0
+        padding: 0
+        cursor: pointer
+        vertical-align: middle
+        color: inherit
+        font-weight: 400
+        font-size: 0.875rem
+        line-height: 1.75
+        letter-spacing: 0.02857em
+        min-width: 64px
+        padding: 6px 16px
+        border-radius: 4px
+        transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms
+        color: #fff
+        background-color: #4361ee
+      > input
+        width: 100%
+        font-family: "Roboto","Helvetica","Arial",sans-serif
+        font-weight: 400
+        font-size: 1rem
+        line-height: 1.4375em
+        letter-spacing: 0.00938em
+        color: rgba(0, 0, 0, 0.87)
+        box-sizing: border-box
+        position: relative
+        cursor: text
+        display: -webkit-inline-box
+        display: -webkit-inline-flex
+        display: -ms-inline-flexbox
+        display: inline-flex
+        -webkit-align-items: center
+        -webkit-box-align: center
+        -ms-flex-align: center
+        align-items: center
+        padding: 4px 0 5px
+        position: relative
+        border-radius: 4px
+        padding: 16.5px 14px
+        border: 1px solid rgba(0, 0, 0, 0.2)
+        border-radius: 4px
+        &:hover
+          border: 1px solid #000
+        &:focus
+          outline: 0
+          border: 2px solid #4361ee
+
+@media screen and (max-width: 1200px)
+  .post__block
+    width: 100%
+
+@media screen and ( max-width: 880px )
+  .menu__post
+    margin-left: -30px
+
+@media screen and ( max-width: 640px )
+  .menu__post
+    margin-left: -30px
+
+@media screen and ( max-width: 640px )
+  .menu__post
+    margin-left: -40px
+
+@media screen and ( max-width: 366px )
+  .menu__post
+    margin-left: -40px
+  .title
+    font-size: 1.1em
+  .text
+    font-size: 13px
+  .postInfo
+    display: flex
+    flex-wrap: wrap
+    > p
+      font-size: 10px
+    // display: flex
+    // flex-direction: column

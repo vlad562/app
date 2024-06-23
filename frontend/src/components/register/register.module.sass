@@ -1,0 +1,136 @@
+.container
+  max-width: 1200px
+  margin: 0 auto
+  padding: 5px 15px
+
+.register__block
+  background-color: #fff
+  display: flex
+  width: 400px
+  border-radius: 4px
+  flex-direction: column
+  margin: 0 auto
+
+.register__inner
+  padding: 50px
+  > h1
+    text-align: center
+    margin: 0
+    font-weight: 400
+    font-size: 1.5rem
+    line-height: 1.334
+    letter-spacing: 0em
+    margin-bottom: 35px
+  > img
+    margin-right: auto
+    margin-left: auto
+    margin-bottom: 30px
+  > form
+    display: flex
+    flex-direction: column
+    > .fetch__input
+      margin-top: 10px
+      cursor: pointer
+      appearance: none
+      border: 0
+      border-radius: 5px
+      background: #4676D7
+      color: #fff
+      padding: 8px 16px
+      font-size: 13px
+    > .form__input-name
+      position: relative
+      z-index: 1000
+      > .error__message-name
+        color: red
+        margin-left: 5px
+      > input
+        padding: 14px 14px
+        width: 100%
+        border-radius: 4px
+        border: 1px solid rgba(0, 0, 0, 0.3)
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 20px
+        background-color: rgba(0, 0, 0, 0)
+        z-index: 100
+        &:hover
+          border: 1px solid #000
+          border-radius: 4px
+        &:focus
+          outline: 0
+          border: 2px solid #4361ee
+          border-radius: 4px
+      > .name
+        position: absolute
+        color: rgba(0, 0, 0, 0.6)
+        left: 6%
+        top: 27%
+        z-index: -1
+    > .form__input-email
+      position: relative
+      z-index: 1000
+      > .error__message-email
+        color: red
+        margin-left: 5px
+      > input
+        padding: 14px 14px
+        width: 100%
+        border-radius: 4px
+        border: 1px solid rgba(0, 0, 0, 0.3)
+        margin-left: auto
+        margin-right: auto
+        margin-bottom: 20px
+        background-color: rgba(0, 0, 0, 0)
+        z-index: 1000
+        &:hover
+          border: 1px solid #000
+          border-radius: 4px
+        &:focus
+          outline: 0
+          border: 2px solid #4361ee
+          border-radius: 4px
+      > .email
+        position: absolute
+        color: rgba(0, 0, 0, 0.6)
+        left: 7%
+        top: 28%
+        z-index: -1
+
+    > .form__input-password
+      position: relative
+      z-index: 1000
+      > .error__message-password
+        color: red
+        margin-left: 5px
+      > input
+        margin-bottom: 20px
+        padding: 14px 14px
+        width: 100%
+        border-radius: 4px
+        border: 1px solid rgba(0, 0, 0, 0.3)
+        margin-left: auto
+        margin-right: auto
+        background-color: rgba(0, 0, 0, 0)
+        z-index: 1000
+        &:hover
+          border: 1px solid #000
+          border-radius: 4px
+        &:focus
+          outline: 0
+          border: 2px solid #4361ee
+          border-radius: 4px
+      > .password
+        position: absolute
+        top: 26%
+        color: rgba(0, 0, 0, 0.6)
+        left: 6%
+        z-index: -1
+
+@media screen and ( max-width: 431px  )
+  .register__block
+    width: 300px
+
+@media screen and ( max-width: 330px  )
+  .register__block
+    width: 250px

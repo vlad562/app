@@ -1,0 +1,44 @@
+@keyframes show
+  from { opacity: 0 }             
+  to { opacity: 1 }
+
+.container
+  max-width: 1200px
+  margin: 0 auto
+  padding: 5px 15px
+
+.navMenu
+  display: flex
+  margin-bottom: 15px
+  > .navMenu__block
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    & > .new__post
+      color: #4361ee
+      padding: 12px 16px
+      font-size: 0.875rem
+      cursor: pointer
+    & > .populate__post
+      color: #4361ee
+      font-size: 0.875rem
+      line-height: 1.25
+      padding: 12px 16px
+      cursor: pointer
+    & > span
+      display: block
+      background-color: #4361ee
+      height: 2px
+      width: 100%
+      animation: show 1s 1
+      animation-fill-mode: forwards
+
+.main__mid
+  display: flex
+
+@media screen and (max-width: 1200px)
+  .tags__block
+    display: none
+  .main__mid__post-block
+    width: 100%
